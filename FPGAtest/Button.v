@@ -39,8 +39,8 @@ module debounce(
     input sys_rst_n,
     output reg stable_out);
     
-//parameter NDELAY = 650000;
-parameter NDELAY = 0; // For simulation
+parameter NDELAY = 650000;
+// parameter NDELAY = 0; // For simulation
 parameter NBITS = 20;
 
 reg [NBITS-1:0] count;
