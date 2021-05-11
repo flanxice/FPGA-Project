@@ -1,0 +1,7 @@
+0.7
+2020.2
+Nov 18 2020
+09:20:35
+/home/fiee/Nutstore Files/pytorchtest/FPGA_project_reference/FPGAtest/Button.v,1620571779,verilog,,/home/fiee/Nutstore Files/pytorchtest/FPGA_project_reference/TheBigProject/TheBigProject.srcs/sources_1/new/ButtonSim.v,,Button;debounce,,,,,,,,
+/home/fiee/Nutstore Files/pytorchtest/FPGA_project_reference/TheBigProject/TheBigProject.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
+/home/fiee/Nutstore Files/pytorchtest/FPGA_project_reference/TheBigProject/TheBigProject.srcs/sources_1/new/ButtonSim.v,1620571675,verilog,,,,ButtonSim,,,,,,,,

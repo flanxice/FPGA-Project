@@ -1,0 +1,15 @@
+NET "double_clock" LOC = "C8";
+NET "double_clock" TNM_NET = "double_clock";
+TIMESPEC "TS_double_clock" = PERIOD "double_clock" 39 ns HIGH 50 %;
+
+#NET "led"		LOC = "C15";
+#NET "button"		LOC = "A12";
+
+NET "horiz_sync"	LOC = "D11";	# 34
+NET "vert_sync"		LOC = "B11";	# 33
+NET "red"			LOC = "C11";	# 32
+NET "green"			LOC = "A11";	# 31
+NET "blue"			LOC = "E10";	# 30
+NET "pad_clock"		LOC = "B10";	# 29
+NET "pad_load"		LOC = "C10";	# 28
+NET "pad_data"		LOC = "A10";	# 27

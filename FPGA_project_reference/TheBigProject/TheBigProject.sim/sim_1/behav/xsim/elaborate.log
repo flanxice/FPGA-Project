@@ -1,0 +1,15 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/fiee/Software/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 8979ec7cb1f84925a3b893383450791d --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ButtonSim_behav xil_defaultlib.ButtonSim xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.debounce
+Compiling module xil_defaultlib.Button
+Compiling module xil_defaultlib.ButtonSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ButtonSim_behav

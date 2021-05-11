@@ -1,0 +1,87 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Wed Dec 27 20:07:59 2017
+| Host         : C-13142 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Tetris_top_control_sets_placed.rpt
+| Design       : Tetris_top
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    20 |
+| Unused register locations in slices containing registers |    78 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             277 |           85 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              35 |           14 |
+| Yes          | No                    | No                     |             631 |          202 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              91 |           31 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------+--------------------------------------------+--------------------------------------+------------------+----------------+
+|   Clock Signal   |                Enable Signal               |           Set/Reset Signal           | Slice Load Count | Bel Load Count |
++------------------+--------------------------------------------+--------------------------------------+------------------+----------------+
+|  M_VGA/pxl_clk   |                                            |                                      |                1 |              1 |
+|  M_VGA/pxl_clk   |                                            | M_VGA/VSync_i_1_n_0                  |                1 |              1 |
+|  clk2            | M_TET/FSM_sequential_Game_State[3]_i_1_n_0 |                                      |                3 |              4 |
+|  clk2            | M_TET/AP_State_PS                          |                                      |                3 |              5 |
+|  clk2            |                                            | M_TET/AP_State_PSd[15]_i_1_n_0       |                1 |              6 |
+|  M_VGA/pxl_clk   |                                            | M_VGA/RGB[7]_i_1_n_0                 |                5 |              8 |
+|  M_VGA/pxl_clk   |                                            | M_VGA/clear                          |                3 |             10 |
+| ~HSync_OBUF_BUFG |                                            | M_VGA/VerticalCounter[9]_i_1_n_0     |                4 |             10 |
+|  clk2            | M_TET/Grid_Settled                         | M_TET/Grid_Settled[199]_i_1_n_0      |                3 |             10 |
+|  clk2            | M_TET/Score[12]_i_2_n_0                    | M_TET/Score[12]_i_1_n_0              |                5 |             13 |
+|  clk_IBUF_BUFG   |                                            |                                      |                7 |             18 |
+|  clk2            | M_TET/Grid_Mask                            | M_TET/Grid_Mask[189]_i_1_n_0         |               11 |             19 |
+| ~HSync_OBUF_BUFG | M_VGA/GridB_Buff[199]_i_1_n_0              | M_VGA/GridB_Buff[9]_i_1_n_0          |                4 |             20 |
+|  clk2            | M_TET/Game_State_Counter                   |                                      |               20 |             22 |
+|  M_SEG/scan_clk  |                                            |                                      |                8 |             24 |
+|  clk2            | M_TET/Game_Clock_Counter                   | M_TET/Game_Clock_Counter[28]_i_1_n_0 |                8 |             29 |
+|  clk2            | M_TET/AP_State_SA                          |                                      |               10 |             30 |
+|  clk2            | M_TET/Grid_Settled                         |                                      |               92 |            190 |
+|  clk2            |                                            |                                      |               69 |            234 |
+| ~HSync_OBUF_BUFG | M_VGA/GridB_Buff[199]_i_1_n_0              |                                      |               74 |            380 |
++------------------+--------------------------------------------+--------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     2 |
+| 4      |                     1 |
+| 5      |                     1 |
+| 6      |                     1 |
+| 8      |                     1 |
+| 10     |                     3 |
+| 13     |                     1 |
+| 16+    |                    10 |
++--------+-----------------------+
+
+
