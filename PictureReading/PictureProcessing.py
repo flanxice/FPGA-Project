@@ -56,7 +56,7 @@ def ReadNOTblackcolor(ImageDatas, lenth=Lenth, width=Width):
             if (all(ImageDatas[i, j] == WHITE)) and (all(ImageDatas[i, j + 1] == BLACK)):
                 tempRGBrow.append(j)
             if (all(ImageDatas[i, j] == BLACK)) and all(ImageDatas[i, j + 1] == WHITE):
-                tempRGBrow.append((j - 1))
+                tempRGBrow.append((j + 1))
         if (len(tempRGBrow) > 1):
             tempRGB.append(tempRGBrow)
     return tempRGB
