@@ -56,16 +56,50 @@ def ReadNOTblackcolor(ImageDatas, lenth=Lenth, width=Width):
             if (all(ImageDatas[i, j] == WHITE)) and (all(ImageDatas[i, j + 1] == BLACK)):
                 tempRGBrow.append(j)
             if (all(ImageDatas[i, j] == BLACK)) and all(ImageDatas[i, j + 1] == WHITE):
-                tempRGBrow.append((j + 1))
+                tempRGBrow.append(j + 1)
         if (len(tempRGBrow) > 1):
             tempRGB.append(tempRGBrow)
     return tempRGB
 
 
+# read a Background witch is designed
+# read color whitch is not BLACK
+# return x,y of (!BLACK)
+def ReadNOTblackcolorall(ImageDatas, lenth=Lenth, width=Width):
+    tempRGB = []
+    for i in range(width):
+        # tempPre = BLACK;
+        tempRGBrow = [i]
+        for j in range(lenth):
+            if (all(ImageDatas[i, j] == WHITE)):
+                tempRGBrow.append(j)
+        if (len(tempRGBrow) > 1):
+            tempRGB.append(tempRGBrow)
+    return tempRGB
+
+
+# deal with tempRGB(!BLACK)
+# return edge
+def getedge(RGBall):
+    RGBedge = []
+    for i in range(len(RGBall)):
+        temprow = RGBall[i]
+        need = temprow[0:2]
+        for j in range(len(temprow)):
+            if (j > 1 and j < (len(temprow) - 1)):
+                if (temprow[j] != (temprow[j - 1] + 1)):
+                    need.append('Start')
+                    need.append(temprow[j])
+                elif (temprow[j] != (temprow[j + 1] - 1)):
+                    need.append('End')
+                    need.append(temprow[j])
+        need.append(temprow[-1])
+        RGBedge.append(need)
+    return RGBedge
+
+
 ###################### Draw Picture ##################################
-
-
-def DrawPicture(ImageDatas, form, lenth=Lenth, width=Width, save=True, show=True):
+def DrawPicture(ImageDatas, form='PIL', lenth=Lenth, width=Width, save=True, show=True):
     if (form == 'PIL'):
         newImage = Image.new('RGB', (lenth, width))
         for i in range(width):
