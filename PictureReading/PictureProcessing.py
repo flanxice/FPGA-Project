@@ -98,6 +98,20 @@ def getedge(RGBall):
     return RGBedge
 
 
+# read (!black) RGB to 1
+def GetTrueArray(ImageDatas, lenth=Lenth, width=Width):
+    RGBdatas = []
+    for i in range(width):
+        RGBrow = []
+        for j in range(lenth):
+            if all(ImageDatas[i, j] != BLACK):
+                RGBrow.append(1)
+            else:
+                RGBrow.append(0)
+        RGBdatas.append(RGBrow)
+    return RGBdatas
+
+
 ###################### Draw Picture ##################################
 def DrawPicture(ImageDatas, form='PIL', lenth=Lenth, width=Width, save=True, show=True):
     if (form == 'PIL'):
