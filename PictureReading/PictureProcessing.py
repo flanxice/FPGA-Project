@@ -99,17 +99,26 @@ def getedge(RGBall):
 
 
 # read (!black) RGB to 1
-def GetTrueArray(ImageDatas, lenth=Lenth, width=Width):
+def Get01Array(ImageDatas, lenth=Lenth, width=Width):
     RGBdatas = []
     for i in range(width):
         RGBrow = []
         for j in range(lenth):
-            if all(ImageDatas[i, j] != BLACK):
+            if (list(ImageDatas[i, j]) == WHITE):
                 RGBrow.append(1)
             else:
                 RGBrow.append(0)
         RGBdatas.append(RGBrow)
     return RGBdatas
+
+
+# input 1 or 0
+# return pixel [a,b,c]
+def GetRGB1pixel(RGB01):
+    if (RGB01 == 1):
+        return WHITE
+    elif (RGB01 == 0):
+        return BLACK
 
 
 ###################### Draw Picture ##################################
@@ -132,6 +141,31 @@ def DrawPicture(ImageDatas, form='PIL', lenth=Lenth, width=Width, save=True, sho
             plt.savefig('plt.jpg')
         if show:
             plt.show()
+
+
+# draw picture with RGB01
+def DrawPictureRGB01(RGB01, lenth=Lenth, width=Width, save=True, show=True):
+    newImage = Image.new('RGB', (lenth, width))
+    for i in range(width):
+        for j in range(lenth):
+            RGB = GetRGB1pixel(RGB01[i][j])
+            newImage.putpixel((j, i), tuple(RGB))
+    if save:
+        newImage.save('RGB01.jpg')
+    if show:
+        newImage.show()
+
+
+########################## Save as Txt #########################
+def SaveAsTxt(RGB01, lenth=Lenth, width=Width):
+    filetxt = open('RGB01.txt', mode='w')
+    for j in RGB01:
+        str = ''
+        for i in j:
+            str = str + '{}'.format(i)
+        filetxt.write(str)
+        filetxt.write('\n')
+    filetxt.close()
 
 ######################### Test #################################
 # pictureArray = Picture2RGBarray('./BLACK.jpg')
