@@ -14,7 +14,7 @@ always @(posedge sys_clk or posedge sys_rst_n) begin
         counts25Hz <= 0;
         clk25Hz <= 0;
     end
-    else if(counts25Hz >= 25000000) begin
+    else if(counts25Hz >= 12500000) begin
         clk25Hz <= ~clk25Hz;
         counts25Hz <= 0;
     end

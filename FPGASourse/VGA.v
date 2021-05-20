@@ -60,7 +60,7 @@ assign pixel_y = data_req ? (cnt_v - (V_SYNC + V_BACK -1'b1)) : 10'd0;
 always @(posedge vga_clk or posedge sys_rst_n) begin
     if(sys_rst_n)  cnt_h <= 10'd0;
     else begin
-        if(cnt_h < H_TOTOL - 1'b1)  cnt_h <= cnt_h + 1'b1;
+        if(cnt_h < H_TOTAL - 1'b1)  cnt_h <= cnt_h + 1'b1;
         else cnt_h <= 10'd0;
     end
 end
@@ -68,7 +68,7 @@ end
 always @(posedge vga_clk or posedge sys_rst_n) begin
     if(sys_rst_n)  cnt_v <= 10'd0;
     else if(cnt_h == H_TOTAL - 1'b1) begin
-        if(cnt_v < V_TOTOL - 1'b1)  cnt_v <= cnt_v + 1'b1;
+        if(cnt_v < V_TOTAL - 1'b1)  cnt_v <= cnt_v + 1'b1;
         else cnt_v <= 10'd0;
     end
 end
@@ -93,11 +93,11 @@ localparam GREEN = 12'b0000_1111_0000;
 localparam BLUE = 12'b0000_00000_1111;
 
 //**************************Main Code************************
-always @(posedge sys_clk or posedge sys_rst_n) begin
+always @(posedge vga_clk or posedge sys_rst_n) begin
     if(sys_rst_n)   pixel_data <= 12'd0;
     else begin
         if((pixel_x >= 0) && (pixel_x < H_DISP))
-            pixel_data <= BLUE;
+            pixel_data <= BLACK;
     end
     
 end  
@@ -106,7 +106,7 @@ endmodule
 
 // The whole VGA 
 module VGA_out(
-    input vga_clk_w,
+    input sys_clk,
     input sys_rst_n,
     //VGA
     output vga_hs,
@@ -121,10 +121,10 @@ wire [9:0] pixel_y;
 
 //****************************Main Code**************************
 
-// clockDiv clkdiv1(
-//     .sys_clk(sys_clk),         
-//     .sys_rst_n(sys_rst_n),
-//     .clk25Hz(vga_clk_w));
+ clockDiv clkdiv1(
+     .sys_clk(sys_clk),         
+     .sys_rst_n(sys_rst_n),
+     .clk25Hz(vga_clk_w));
 
 vga_driver VGAdriver1(
     .vga_clk(vga_clk_w),   
