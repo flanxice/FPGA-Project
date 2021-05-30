@@ -157,8 +157,8 @@ def DrawPictureRGB01(RGB01, lenth=Lenth, width=Width, save=True, show=True):
 
 
 ########################## Save as Txt #########################
-def SaveAsTxt(RGB01, lenth=Lenth, width=Width):
-    filetxt = open('RGB01.txt', mode='w')
+def SaveAsTxt(RGB01, path, lenth=Lenth, width=Width):
+    filetxt = open(path, mode='w')
     for j in RGB01:
         str = ''
         for i in j:
