@@ -4,7 +4,8 @@
 # @File : makeTXT.py
 # @Software : PyCharm
 
-path = 'RGB01.txt'
+path = './menu01/RGBmenu3.txt'
+savepath = './menu10/menu3.txt'
 
 datas = []
 with open(path, "r") as f:
@@ -21,7 +22,6 @@ for i in range(len(datas)):
 
 # print(datasH)
 
-savepath = 'RGB01data.txt'
 with open(savepath,'w') as f:
     f.writelines(datasH)
 
