@@ -3,23 +3,21 @@
 module clockDiv(
     input sys_clk,          //1s 100M Hz
     input sys_rst_n,
-    output reg clk25Hz      // 1s 25M Hz
-    // output reg clk2ms,
-    // output reg clk1s
+    output reg clk_25M      // 1s 25M Hz
     );
-reg [25:0] counts25Hz;
 
-always @(posedge sys_clk or posedge sys_rst_n) begin
+reg [1:0] counter;
+always @(posedge sys_clk) begin
     if(sys_rst_n) begin
-        counts25Hz <= 0;
-        clk25Hz <= 0;
+        clk_25M <= 0;
+        counter <= 0;       
     end
-    else if(counts25Hz >= 12500000) begin
-        clk25Hz <= ~clk25Hz;
-        counts25Hz <= 0;
+    else begin 
+        if(counter >= 3) begin 
+            clk_25M <= ~clk_25M;
+            counter <= 0;
+        end
+        else counter <= counter + 1;
     end
-    else 
-        counts25Hz <= counts25Hz + 1'b1;   
 end
-
 endmodule
