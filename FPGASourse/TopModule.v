@@ -10,7 +10,7 @@ module Main(
     //VGA out
     output wire [11:0] RGB,
     output wire vga_h,
-    output wire vga_v,
+    output wire vga_v
     //Test
     // output reg [2:0] state_output
     );
@@ -27,7 +27,7 @@ FSM FSM1(
     .state_output(state_output));
 
 DP DP1(
-    .sys_clk(sys_clk)，
+    .sys_clk(sys_clk),
     .sys_rst_n(sys_rst_n),
     .state(state_output),
     .RGB(RGB),

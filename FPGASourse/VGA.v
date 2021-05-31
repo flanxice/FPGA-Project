@@ -1577,7 +1577,7 @@ wire [9:0] pixel_y;
 clockDiv clkdiv1(
      .sys_clk(sys_clk),         
      .sys_rst_n(sys_rst_n),
-     .clk25MHz(vga_clk_w));
+     .clk_25M(vga_clk_w));
 
 vga_driver VGAdriver1(
     .vga_clk(vga_clk_w),   

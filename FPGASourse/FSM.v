@@ -33,10 +33,10 @@ wire vga_clk;
 wire button_up,button_down,button_left,button_right;
 
 // 时钟分频
-clockDiv clockDiv1(
-    .sys_clk(sys_clk),          //1s 100M Hz
-    .sys_rst_n(sys_rst_n),
-    .clk25MHz(vga_clk));
+//clockDiv clockDiv1(
+//    .sys_clk(sys_clk),          //1s 100M Hz
+//    .sys_rst_n(sys_rst_n),
+//    .clk_25M(vga_clk));
 
 Button button_up1(
     .sys_clk(sys_clk),
