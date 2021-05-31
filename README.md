@@ -12,8 +12,6 @@ The Project for our group in digital system class
 - [ ] 代码
   - [ ] 主目录 **进度：75%**
   
-    ——缺少切换
-  
   - [x] VGA输出模块
   
   - [ ] Game1 **进度：80%**

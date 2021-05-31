@@ -4,8 +4,8 @@
 # @File : makeTXT.py
 # @Software : PyCharm
 
-path = './menu01/RGBmenu3.txt'
-savepath = './menu10/menu3.txt'
+path = './menu01repair/RGBmenu2.txt'
+savepath = './menu10repair/menu2.txt'
 
 datas = []
 with open(path, "r") as f:
