@@ -1557,7 +1557,7 @@ endmodule
 
 // The whole VGA 
 module VGA_out(
-    input vga_clk,
+    input sys_clk,
     input sys_rst_n,
     input [1:0] choise,
     //VGA
@@ -1566,17 +1566,18 @@ module VGA_out(
     output [11:0] vga_rgb);
 
 //Wire define
-// wire vga_clk_w;
+wire vga_clk_w;
 wire [11:0] pixel_data;
 wire [9:0] pixel_x;
 wire [9:0] pixel_y;
 
 //****************************Main Code**************************
-
-// clockDiv clkdiv1(
-//      .sys_clk(sys_clk),         
-//      .sys_rst_n(sys_rst_n),
-//      .clk25MHz(vga_clk_w));
+// 这样的话每个VGA输出都有个时钟分频
+//优化的时候可以将时钟分频拿出来
+clockDiv clkdiv1(
+     .sys_clk(sys_clk),         
+     .sys_rst_n(sys_rst_n),
+     .clk25MHz(vga_clk_w));
 
 vga_driver VGAdriver1(
     .vga_clk(vga_clk_w),   
