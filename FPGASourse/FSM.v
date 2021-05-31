@@ -130,7 +130,7 @@ always @(state) begin
 end
 
 // VGA_out vga0(
-//     .vga_clk(vga_clk),
+//     .vga_clk(sys_clk),
 //     .sys_rst_n(sys_rst_n),
 //     .choise(state),
 //     //VGA
