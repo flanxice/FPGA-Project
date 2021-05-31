@@ -22,8 +22,8 @@ module Main(
 // State Define
 parameter   state_game1 = 0,            state_game1_in = 1,
             state_game2 = 2,            state_game2_in = 3,
-            state_game3 = 4,            state_game3_in = 5,
-            state_exit  = 6,            state_exit_in  = 7;
+            // state_game3 = 4,            state_game3_in = 5,
+            state_exit  = 4,            state_exit_in  = 5;
 
 reg [2:0] state;
 reg game_exit;  // control to exit in_state
@@ -73,20 +73,14 @@ always @(posedge sys_clk) begin
             else state <= state_game1;
         end
         state_game2 : begin
-            if(button_down) state <= state_game3;
+            if(button_down) state <= state_exit;
             else if(button_up)  state <= state_game1;
             else if(button_right)  state <= state_game2_in;
             else state <= state_game2;
         end
-        state_game3 : begin
-            if(button_down) state <= state_exit;
-            else if(button_up)  state <= state_game2;
-            else if(button_right)  state <= state_game3_in;
-            else state <= state_game3;
-        end
         state_exit : begin
             if(button_down) state <= state_game1;
-            else if(button_up)  state <= state_game3;
+            else if(button_up)  state <= state_game2;
             else if(button_right)  state <= state_exit_in;
             else state <= state_exit;
         end
@@ -104,13 +98,6 @@ always @(posedge sys_clk) begin
             end
             else state <= state_game2_in;
         end
-        state_game3_in : begin
-            if(game_exit) begin
-                state <= state_game1;
-                game_exit <= 1'b0;
-            end
-            else state <= state_game3_in;
-        end
         state_exit_in  : state <= state_exit_in;
     endcase               
 end    
@@ -120,16 +107,26 @@ always @(state) begin
     case (state)
         state_game1      : begin
             state_output = state;
-            // background = //
+            VGA_out vga0(
+                .vga_clk(vga_clk),
+                .sys_rst_n(sys_rst_n),
+                .choise(0),
+                //VGA
+                .vga_hs(vga_h),
+                .vga_vs(vga_v),
+                .vga_rgb(RGB));
         end
         state_game2      : begin
             state_output = state;
-            // background = //
+            VGA_out vga1(
+                .vga_clk(vga_clk),
+                .sys_rst_n(sys_rst_n),
+                .choise(1),
+                //VGA
+                .vga_hs(vga_h),
+                .vga_vs(vga_v),
+                .vga_rgb(RGB));
         end  
-        state_game3      : begin
-            state_output = state;
-            // background = //
-        end
         state_game1_in   : begin
             state_output = state;
             // background = //
@@ -138,13 +135,16 @@ always @(state) begin
             state_output = state;
             // background = //
         end
-        state_game3_in   : begin
-            state_output = state;
-            // background = //
-        end
         state_exit       : begin
             state_output = state;
-            // background = //
+            VGA_out vga_exit(
+                .vga_clk(vga_clk),
+                .sys_rst_n(sys_rst_n),
+                .choise(2),
+                //VGA
+                .vga_hs(vga_h),
+                .vga_vs(vga_v),
+                .vga_rgb(RGB));
         end
         state_exit_in    : begin
             state_output = state;
