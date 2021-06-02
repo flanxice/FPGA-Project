@@ -1,5 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/fiee/Nutstore Files/pytorchtest/FPGA_project_reference/FPGAtest/Button.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Button
-INFO: [VRFC 10-311] analyzing module debounce
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/fiee/Nutstore Files/pytorchtest/FPGA_project_reference/TheBigProject/TheBigProject.srcs/sources_1/new/ButtonSim.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ButtonSim

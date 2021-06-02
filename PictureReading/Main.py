@@ -15,7 +15,7 @@ BLACK = [0, 0, 0]
 RED = [255, 0, 0]
 
 if __name__ == '__main__':
-    path = './menus/menu3.jpg'
+    path = './menus/menu4.jpg'
     imageArray = PicPro.Picture2RGBarray(path=path)
     # print(imageArray)
     # PicPro.DrawPicture(imageArray, form='plt')
@@ -35,5 +35,5 @@ if __name__ == '__main__':
     # RGBdatasArray = np.array(RGBdatas)
     # print(RGBdatasArray)
     # RGBdatasArray.tofile("RGB.bin")
-    PicPro.SaveAsTxt(RGBdatas,path='./menu01/RGBmenu3.txt')
+    PicPro.SaveAsTxt(RGBdatas,path='./menu01/RGBmenu4.txt')
     PicPro.DrawPictureRGB01(RGBdatas)
