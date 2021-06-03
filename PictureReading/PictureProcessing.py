@@ -12,6 +12,7 @@ Lenth, Width = 640, 480
 BLACK = [0, 0, 0]
 RED = [255, 0, 0]
 WHITE = [255, 255, 255]
+WHITE_16 = [15, 15, 15]
 
 
 ###################### Load Picture ##############################3
@@ -112,6 +113,19 @@ def Get01Array(ImageDatas, lenth=Lenth, width=Width):
     return RGBdatas
 
 
+def Get01Array16(ImageDatas_16, lenth=Lenth, width=Width):
+    RGBdatas = []
+    for i in range(width):
+        RGBrow = []
+        for j in range(lenth):
+            if (list(ImageDatas_16[i, j]) == WHITE_16):
+                RGBrow.append(1)
+            else:
+                RGBrow.append(0)
+        RGBdatas.append(RGBrow)
+    return RGBdatas
+
+
 # input 1 or 0
 # return pixel [a,b,c]
 def GetRGB1pixel(RGB01):
@@ -167,6 +181,16 @@ def SaveAsTxt(RGB01, path, lenth=Lenth, width=Width):
         filetxt.write('\n')
     filetxt.close()
 
+
+def SaveAsTxtcolor(RGB01, path, lenth=Lenth, width=Width):
+    filetxt = open(path, mode='w')
+    for j in RGB01:
+        str = ''
+        for i in j:
+            str = str + i
+        filetxt.write(str)
+        filetxt.write('\n')
+    filetxt.close()
 ######################### Test #################################
 # pictureArray = Picture2RGBarray('./BLACK.jpg')
 # print(pictureArray)

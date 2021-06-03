@@ -1,11 +1,11 @@
 # -*- coding = utf-8 -*-
-# @Time : 2021/5/30 23:23
+# @Time : 2021/6/3 9:43
 # @Author : SBP
-# @File : makeTXT.py
+# @File : makecolorTXT.py
 # @Software : PyCharm
 
-path = './menu01/RGBmenu1_16.txt'
-savepath = './menu10/menu1_16.txt'
+path = './coloredse.txt'
+savepath = './color10se.txt'
 
 datas = []
 with open(path, "r") as f:
@@ -17,12 +17,10 @@ with open(path, "r") as f:
 datasH = []
 for i in range(len(datas)):
     data = datas[i]
-    dataH = 'data['+str(i)+"]<=640'd"+str(int(data,2))+';\n'
+    dataH = 'R['+str(i)+"]<=2560'd"+str(int(data,2))+';\n'
     datasH.append(dataH)
 
 # print(datasH)
 
 with open(savepath,'w') as f:
     f.writelines(datasH)
-
-
