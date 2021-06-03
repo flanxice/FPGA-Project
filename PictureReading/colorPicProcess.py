@@ -33,13 +33,12 @@ R01 = getbin(R)
 G01 = getbin(G)
 B01 = getbin(B)
 
-print(R)
-print(R01[0][0])
-print(len(R01))
-print(len(R01[0]))
+# print(R)
+# print(R01[0][0])
+# print(len(R01))
+# print(len(R01[0]))
 savepath = './coloredse.txt'
 PicPro.SaveAsTxtcolor(B01, path=savepath)
-save10path = './colored10se.txt'
 
-
+# save10path = './colored10se.txt'
 # PicPro.DrawPicture(ImageDatas=imageArrayrestore)
