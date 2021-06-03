@@ -48,7 +48,7 @@ for i in range(len(data3)):
 datas4 = []
 for i in range(len(data4)):
     data = data4[i]
-    dataH = 'B2[' + str(i) + "]<=640'd" + str(int(data, 2)) + ';\n'
+    dataH = 'B4[' + str(i) + "]<=640'd" + str(int(data, 2)) + ';\n'
     datas4.append(dataH)
 
 # print(datasH)
