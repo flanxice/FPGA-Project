@@ -8,7 +8,6 @@ module clockDiv(
 
 reg counter_4;
 
- 
 always @(posedge sys_clk) begin
 	if(sys_rst_n) begin
 		counter_4 <= 0;

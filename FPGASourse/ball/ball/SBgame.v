@@ -3,24 +3,22 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2021/05/30 08:54:09
+// Create Date:    15:56:29 05/26/2016 
 // Design Name: 
-// Module Name: tanqiu
+// Module Name:    SBgame 
 // Project Name: 
 // Target Devices: 
-// Tool Versions: 
+// Tool versions: 
 // Description: 
-// 
+//
 // Dependencies: 
-// 
-// Revision:
+//
+// Revision: 
 // Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Additional Comments: 
+//
 //////////////////////////////////////////////////////////////////////////////////
-
-
-module tanqiu(
+module SBgame(
 	input mclk,    
 	input rst,
 	input to_left1,
@@ -32,31 +30,35 @@ module tanqiu(
 	output [2:1] OutBlue,
 	output [2:0] OutGreen, 
 	output [2:0] OutRed,         
-	output VSync);
+	output VSync,
+	output [3:0] seg_select,
+	output [6:0] seg_LED);
 
-wire lose;
+wire [1:0] lose1; wire [1:0] lose2;
 
-VGA_Dispay dis(
+VGA_Dispay u_VGA_Disp(
 	.clk(mclk),
 	.to_left1(to_left1),
 	.to_right1(to_right1),
-	.bar_move_speed(bar_move_speed),
 	.to_left2(to_left2),
     .to_right2(to_right2),
+	.bar_move_speed(bar_move_speed),
 	.hs(HSync),
 	.Blue(OutBlue),
 	.Green(OutGreen),
 	.Red(OutRed),
 	.vs(VSync),
-	.lose(lose));
+	.lose1(lose1),
+	.lose2(lose2),
+	.rst(rst));
 	
-endmodule
-
-module seven_seg(
-         input clk, 
-         input rst, 
-         input lose,
-         output reg [3:0] select, 
-         output reg [6:0] seg
-        );
+//seven_seg score_board(
+//	.clk(mclk),
+//	.rst(rst),
+//	.lose1(lose1),
+////	.lose2(lose2),
+//	.select(seg_select),
+//	.seg(seg_LED)
+//	);
+	
 endmodule
