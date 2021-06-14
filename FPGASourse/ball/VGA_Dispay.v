@@ -10,12 +10,11 @@ module VGA_Dispay(
     input to_right2,
     output reg hs,
     output reg vs,
-    output reg [2:0] Red,
-    output reg [2:0] Green,
-    output reg [1:0] Blue,
+    output reg [3:0] Red,
+    output reg [3:0] Green,
+    output reg [3:0] Blue,
     output reg lose1,
-    output reg lose2
-    );
+    output reg lose2);
   
 parameter PAL = 640;		
 parameter LAF = 480;        
@@ -85,20 +84,21 @@ end*/
 if (Vcnt>=up_pos1 && Vcnt<=down_pos1&& Hcnt>=left_pos1 && Hcnt<=right_pos1||
     Vcnt<=up_pos2 && Vcnt>=down_pos2&& Hcnt>=left_pos2 && Hcnt<=right_pos2) 
 begin  
-    Red <= Hcnt[3:1];  
-    Green <= Hcnt[6:4];  
-    Blue <= Hcnt[8:7]; 
+    Red <= Hcnt[3:0];  
+    Green <= Hcnt[5:2];  
+    Blue <= Hcnt[8:5]; 
+
 end  
 else if ( (Hcnt - ball_x_pos)*(Hcnt - ball_x_pos) + (Vcnt - ball_y_pos)*(Vcnt - ball_y_pos) <= (ball_r * ball_r) ) 
 begin  
-    Red <= Hcnt[3:1];  
-    Green <= Hcnt[6:4];  
-    Blue <= Hcnt[8:7];  
+    Red <= Hcnt[3:0];  
+    Green <= Hcnt[5:2];  
+    Blue <= Hcnt[8:5];  
 end  
 else begin  
-    Red <= 3'b000;  
-    Green <= 3'b000;  
-    Blue <= 2'b00;  
+    Red <= 4'b0000;  
+    Green <= 4'b0000;  
+    Blue <= 4'b0000;  
 end  
 
 end

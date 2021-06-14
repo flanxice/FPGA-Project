@@ -27,14 +27,15 @@ module SBgame(
 	input to_right2,
 	input [3:0] bar_move_speed,
 	output HSync,         
-	output [2:1] OutBlue,
-	output [2:0] OutGreen, 
-	output [2:0] OutRed,         
+	output [3:0] OutBlue,
+	output [3:0] OutGreen, 
+	output [3:0] OutRed,         
 	output VSync,
 	output [3:0] seg_select,
 	output [6:0] seg_LED);
 
-wire [1:0] lose1; wire [1:0] lose2;
+wire [1:0] lose1; 
+wire [1:0] lose2;
 
 VGA_Dispay u_VGA_Disp(
 	.clk(mclk),
@@ -52,13 +53,13 @@ VGA_Dispay u_VGA_Disp(
 	.lose2(lose2),
 	.rst(rst));
 	
-//seven_seg score_board(
-//	.clk(mclk),
-//	.rst(rst),
-//	.lose1(lose1),
-////	.lose2(lose2),
-//	.select(seg_select),
-//	.seg(seg_LED)
-//	);
+seg score_board(
+	.clk(mclk),
+	.rst(rst),
+	.lose1(lose1),
+	.lose2(lose2),
+	.select(seg_select),
+	.seg(seg_LED)
+	);
 	
 endmodule

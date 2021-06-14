@@ -49,7 +49,6 @@ always @(*) begin
     RGB1 = {red, green, blue};
 end
 
-
 // clockDiv clkdivmain(.sys_clk(sys_clk),.sys_rst_n(sys_rst_n),.clk_25M(clk_25M));
 VGA_out vgamain(.sys_clk(sys_clk),.sys_rst_n(sys_rst_n),.choise(choice),.vga_hs(vga_h0),.vga_vs(vga_v0),.vga_rgb(RGB0));
 SBgame game1(.mclk(sys_clk),.rst(sys_rst_n),.to_left1(left),.to_right1(right),.to_left2(left1),.to_right2(right2),.bar_move_speed(speedcontrol),

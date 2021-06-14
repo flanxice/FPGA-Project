@@ -17,10 +17,12 @@
 `define NINE 7'b0010000  
 
 // some frequently-used colors define
-`define WHITE = 12'b1111_1111_1111;
-`define BLACK = 12'b0000_0000_0000;
-`define RED = 12'b1111_0000_0000;
-`define GREEN = 12'b0000_1111_0000;
-`define BLUE = 12'b0000_00000_1111;
+`define WHITE 12'b1111_1111_1111
+`define BLACK 12'b0000_0000_0000
+`define RED   12'b1111_0000_0000
+`define GREEN 12'b0000_1111_0000
+`define BLUE  12'b0000_0000_1111
+`define GRAY  12'b0111_0111_0111
+
 
  

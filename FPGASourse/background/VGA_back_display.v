@@ -6,10 +6,13 @@ module vga_display_back(
     input [9:0] pixel_x,
     input [9:0] pixel_y,
     input [1:0] choise,
-    output reg [11:0] pixel_data);
+    output [11:0] pixel_data);
 
 parameter H_DISP = 10'd640;
 parameter V_DISP = 10'd480;
+reg [3:0] red, green, blue;
+
+assign pixel_data = {red, green, blue};
 
 reg [0:639] data [479:0];
 //(*ram_style = "block"*) reg [0:639] data [199:0];
@@ -1946,11 +1949,68 @@ end
 
 //**************************Main Code************************
 always @(posedge vga_clk or posedge sys_rst_n) begin
-    if(sys_rst_n)   pixel_data <= 12'd0;
+    if(sys_rst_n) begin
+        red <= 4'b0000;  
+        green <= 4'b0000;  
+        blue <= 4'b0000; 
+    end  
     else begin
-        if(data[pixel_y][pixel_x] == 1'b1)  pixel_data <= 12'b1111_1111_1111;
-        else pixel_data <= 12'b0000_0000_0000;
+        if(data[pixel_y][pixel_x] == 1'b1) begin  // 有字部分
+            if(pixel_y >= 50 && pixel_y <= 100) begin
+                red <= pixel_x[3:0];  
+                green <= pixel_x[5:2];  
+                blue <= pixel_x[8:5]; 
+            end
+            else begin
+                case(choise)
+                    0: begin
+                        if(pixel_y >= 150 && pixel_y <= 200) begin
+                            red <= 4'b1111;  
+                            green <= 4'b0000;  
+                            blue <= 4'b0000; 
+                        end
+                        else begin
+                            red <= 4'b0000;  
+                            green <= 4'b0000;  
+                            blue <= 4'b1111; 
+                        end
+                    end
+                    1: begin
+                        if(pixel_y >= 230 && pixel_y <= 270) begin
+                            red <= 4'b1111;  
+                            green <= 4'b0000;  
+                            blue <= 4'b0000; 
+                        end
+                        else begin
+                            red <= 4'b0000;  
+                            green <= 4'b0000;  
+                            blue <= 4'b1111; 
+                        end
+                    end
+                    2: begin
+                        if(pixel_y >= 300 && pixel_y <= 350) begin
+                            red <= 4'b1111;  
+                            green <= 4'b0000;  
+                            blue <= 4'b0000; 
+                        end
+                        else begin
+                            red <= 4'b0000;  
+                            green <= 4'b0000;  
+                            blue <= 4'b1111; 
+                        end
+                    end
+                    3: begin
+                        red <= pixel_x[3:0];  
+                        green <= pixel_x[5:2];  
+                        blue <= pixel_x[8:5]; 
+                    end
+            end
+        end        
+        else begin // 背景颜色 gray
+            red <= 4'b0111;  
+            green <= 4'b0111;    
+            blue <= 4'b0111;  
+        end
     end
-    
 end  
 endmodule

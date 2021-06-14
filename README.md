@@ -9,16 +9,16 @@ The Project for our group in digital system class
   - [x] 显示屏
   - [x] VGA串口连接线
   - [ ] PS2手柄
-- [ ] 代码
-  - [ ] 主目录 **进度：75%**
+- [ ] 代码  **进度：基本完成**
+  - [x] 主目录 **进度：75%**
   
   - [x] VGA输出模块
   
-  - [ ] Game1 **进度：80%**
+  - [x] Game1 **进度：80%**
   
-  - [ ] Game2 **进度：0%**
+  - [x] Game2 **进度：0%**
   
-  - [ ] Game3 **取消**
+  - [x] Game3 **取消**
 - [ ] 报告
 - [ ] PPT
 
