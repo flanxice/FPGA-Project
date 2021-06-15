@@ -2004,6 +2004,7 @@ always @(posedge vga_clk or posedge sys_rst_n) begin
                         green <= pixel_x[5:2];  
                         blue <= pixel_x[8:5]; 
                     end
+                endcase
             end
         end        
         else begin // 背景颜色 gray
