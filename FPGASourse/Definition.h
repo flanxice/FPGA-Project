@@ -23,6 +23,15 @@
 `define GREEN 12'b0000_1111_0000
 `define BLUE  12'b0000_0000_1111
 `define GRAY  12'b0111_0111_0111
+·define YELLOW  12'b1111_1111_0000
+
+`define ZEROS 4'b0000
+`define ONES  4'b1111
+
+
+
+
+
 
 
  

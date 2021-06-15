@@ -1,5 +1,4 @@
 //游戏控制模块 根据游戏状态产生相应控制信号	
-
 module Game_Ctrl_Unit
 (
 	input clk,
@@ -33,7 +32,7 @@ module Game_Ctrl_Unit
 		end
 		else begin
 			case(game_status)			
-				RESTART:begin           //游戏开始等待
+				RESTART:begin          
 					if(clk_cnt <= 5) begin
 						clk_cnt <= clk_cnt + 1;
 						restart <= 1;						
@@ -71,7 +70,7 @@ module Game_Ctrl_Unit
 					       die_flash <= 1'b0;
 					   else if(clk_cnt == 150_000_000)
 					       die_flash <= 1'b1;
-				    end                        //闪烁
+				    end                        //闪烁；
 					else
 						begin
 							die_flash <= 1;

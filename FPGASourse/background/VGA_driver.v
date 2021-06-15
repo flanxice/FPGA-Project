@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-
+`include "Definition.h"
 
 // VGA Driver
 module vga_driver(

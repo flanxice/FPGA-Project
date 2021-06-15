@@ -84,21 +84,40 @@ end*/
 if (Vcnt>=up_pos1 && Vcnt<=down_pos1&& Hcnt>=left_pos1 && Hcnt<=right_pos1||
     Vcnt<=up_pos2 && Vcnt>=down_pos2&& Hcnt>=left_pos2 && Hcnt<=right_pos2) 
 begin  
-    Red <= Hcnt[3:0];  
-    Green <= Hcnt[5:2];  
-    Blue <= Hcnt[8:5]; 
-
+    if (Vcnt <= 100) begin
+        Red <= `ONES;  
+        Green <= `ZEROS;  
+        Blue <= `ZEROS; 
+    end
+    else if (Vcnt >= 350) begin
+        Red <= `ZEROS;  
+        Green <= `ZEROS;  
+        Blue <= `ONES; 
+    end
 end  
 else if ( (Hcnt - ball_x_pos)*(Hcnt - ball_x_pos) + (Vcnt - ball_y_pos)*(Vcnt - ball_y_pos) <= (ball_r * ball_r) ) 
 begin  
-    Red <= Hcnt[3:0];  
-    Green <= Hcnt[5:2];  
-    Blue <= Hcnt[8:5];  
+    Red <= `ONES;  
+    Green <= `ONES;  
+    Blue <= `ZEROS;  
 end  
 else begin  
-    Red <= 4'b0000;  
-    Green <= 4'b0000;  
-    Blue <= 4'b0000;  
+    if(Vcnt == 240 || Vcnt == 239) begin
+        Red <= `ONES;  
+        Green <= `ONES;  
+        Blue <= `ONES; 
+    end
+    else if(((Hcnt - 320)*(Hcnt - 320) + (Vcnt - 240)*(Vcnt - 240) <= 11025) &&
+        ((Hcnt - 320)*(Hcnt - 320) + (Vcnt - 240)*(Vcnt - 240) >= 10000)) begin
+            Red <= `ONES;  
+            Green <= `ONES;  
+            Blue <= `ONES; 
+        end
+    else begin
+        Red <= `ZEROS;  
+        Green <= `ZEROS;  
+        Blue <= `ZEROS; 
+    end   
 end  
 
 end

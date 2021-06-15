@@ -2000,17 +2000,17 @@ always @(posedge vga_clk or posedge sys_rst_n) begin
                         end
                     end
                     3: begin
-                        red <= pixel_x[3:0];  
-                        green <= pixel_x[5:2];  
-                        blue <= pixel_x[8:5]; 
+                        red <= `ONES;  
+                        green <= `ONES;  
+                        blue <= `ZEROS; 
                     end
                 endcase
             end
         end        
         else begin // 背景颜色 gray
-            red <= 4'b0111;  
-            green <= 4'b0111;    
-            blue <= 4'b0111;  
+            red <= 4'b0000;  
+            green <= 4'b0000;    
+            blue <= 4'b0000;  
         end
     end
 end  

@@ -7,6 +7,7 @@ module Main(
     input left_in1, right_in1, up_in1, down_in1,
     input [3:0] speedcontrol, 
     input exitbutton, 
+    input gamein_rst,
     //VGA out
     output [11:0] RGB,
     output vga_h,
@@ -42,6 +43,7 @@ DP DP1(
     .choice(choice),
     .button_up(up), .button_down(down), .button_left(left), .button_right(right),
     .exitbutton(exitbutton),
+    .gamein_rst(gamein_rst),
     .exit(exit),
     .seg_select(seg_select),
     .seg_LED(seg_LED),
