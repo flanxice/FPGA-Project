@@ -7,10 +7,15 @@
 from PIL import Image
 import PictureProcessing as pic
 
-path = "./menu3.jpg"
-array = pic.CreateBackGroundArray(lenth=190, width=50)
+path = "./menu4.jpg"
+ImageRGB_Array = pic.Picture2RGBarray(path)
+print(ImageRGB_Array)
+ImageRGB_Array16 = (ImageRGB_Array // 16)
+print(ImageRGB_Array)
+RGB01datas = pic.Get01Array16(ImageRGB_Array16)
+pic.SaveAsTxt(RGB01datas, path='./menu4.txt')
+pic.DrawPicture(ImageRGB_Array16 * 16)
 
-pic.DrawPicture(array, form='PIL', lenth=190, width=50)
 # path = "./temp.txt"
 # file = open(path, mode='w')
 # for row in range(51, 101):

@@ -51,7 +51,7 @@ always @(*) begin
 end
 
 // clockDiv clkdivmain(.sys_clk(sys_clk),.sys_rst_n(sys_rst_n),.clk_25M(clk_25M));
-VGA_out vgamain(.sys_clk(sys_clk),.sys_rst_n(sys_rst_n),.choise(choice),.vga_hs(vga_h0),.vga_vs(vga_v0),.vga_rgb(RGB0));
+VGA_out vgaback(.sys_clk(sys_clk),.sys_rst_n(sys_rst_n),.choise(choice),.vga_hs(vga_h0),.vga_vs(vga_v0),.vga_rgb(RGB0));
 SBgame game1(.mclk(sys_clk),.rst(gamein_rst),.to_left1(left_in),.to_right1(right_in),.to_left2(left_in1),.to_right2(right_in1),.bar_move_speed(speedcontrol),
     .HSync(vga_h1),.VSync(vga_v1),.OutBlue(blue),.OutGreen(grean),.OutRed(red),.seg_select(seg_select1),.seg_LED(seg_LED1));
 top_greedy_snake game2(.clk(sys_clk),.rst(gamein_rst),.left(left_in),.right(right_in),.up(up_in),.down(down_in),.hsync(vga_h2),.vsync(vga_v2),
@@ -65,12 +65,12 @@ always @(*) begin
             {seg_select, seg_LED} = 11'b00000000000;
         end
         1 : begin
-            {RGB, vga_h, vga_v} = {RGB1, vga_h1, vga_v1};
-            {seg_select, seg_LED} = {seg_select1, seg_LED1};
-        end
-        2 : begin
             {RGB, vga_h, vga_v} = {RGB2, vga_h2, vga_v2};
             {seg_select, seg_LED} = {seg_select2, seg_LED2};
+        end
+        2 : begin
+            {RGB, vga_h, vga_v} = {RGB1, vga_h1, vga_v1};
+            {seg_select, seg_LED} = {seg_select1, seg_LED1};
         end
     endcase
     

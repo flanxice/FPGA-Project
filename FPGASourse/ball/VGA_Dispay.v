@@ -97,7 +97,7 @@ begin
 end  
 else if ( (Hcnt - ball_x_pos)*(Hcnt - ball_x_pos) + (Vcnt - ball_y_pos)*(Vcnt - ball_y_pos) <= (ball_r * ball_r) ) 
 begin  
-    Red <= `ONES;  
+    Red <= `ZEROS;  
     Green <= `ONES;  
     Blue <= `ZEROS;  
 end  
