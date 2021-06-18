@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bd7ed873-1f78-4b65-90f3-b2be773b0772" name="默认变更列表" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/FPGA-Project.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vs/FPGA-Project/v16/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vs/ProjectSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vs/VSWorkspaceState.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vs/slnx.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/Button.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/ClockDiv.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/DataPath.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/Definition.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/FSM.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/TopModule.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/background/VGA_back_display.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/background/VGA_back_whole.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/background/VGA_driver.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/ball/SBgame.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/ball/VGA_Dispay.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/ball/seg.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/ball/seg_decoder.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/snake/Game_Ctrl_Unit.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/snake/Key.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/snake/Seg_Display.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/snake/Snake.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/snake/Snake_Eatting_Apple.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/snake/VGA_Control.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/snake/VGA_top.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGASourse/snake/top_greedy_snake.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGA_project_reference/Tetris_Basys3/source/tetris_vga2.v" beforeDir="false" afterPath="$PROJECT_DIR$/../FPGA_project_reference/Tetris_Basys3/source/tetris_vga2.v" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PIL.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/PIL.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/makeTXT.py" beforeDir="false" afterPath="$PROJECT_DIR$/makeTXT.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu4d.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/新建文本文档.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1u7pG5EJ06avgByBwZ0ALXD38eA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="RunManager" selected="Python.makeTXT">
+    <configuration name="makeTXT" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PictureReading" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/makeTXT.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="temp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PictureReading" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.makeTXT" />
+        <item itemvalue="Python.temp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="bd7ed873-1f78-4b65-90f3-b2be773b0772" name="默认变更列表" comment="" />
+      <created>1624026387385</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624026387385</updated>
+      <workItem from="1624026390550" duration="2242000" />
+      <workItem from="1624036035766" duration="38000" />
+      <workItem from="1624039441848" duration="1170000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PictureReading$temp.coverage" NAME="temp 覆盖结果" MODIFIED="1624039478657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PictureReading$makeTXT.coverage" NAME="makeTXT 覆盖结果" MODIFIED="1624040146712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

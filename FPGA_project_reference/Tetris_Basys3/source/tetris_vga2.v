@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -46,7 +47,7 @@ module tetris_vga2(
 			  COLOR_GRIDB      = 8'b000_110_00,
 			  COLOR_BOTH       = 8'b111_000_00;
 	
-	parameter HPULSE_END  = 96 ,
+	parameter HPULSE_END  = 96,
 			  LMARGIN_END = 336,
 			  LBORDER_END = 352,
 			  RGAME_END   = 512,
