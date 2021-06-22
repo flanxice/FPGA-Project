@@ -48,9 +48,9 @@ begin
 	4'b1001:
 		code <= `NINE;
     4'b1010:
-        code <= 7'b1000001 ;
+        code <= 7'b1000001;
     4'b1011:
-        code <= 7'b0010010 ;
+        code <= 7'b0010010;
 	default:
 		code <= code;
 	endcase

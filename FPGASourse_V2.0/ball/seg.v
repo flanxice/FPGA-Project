@@ -17,7 +17,7 @@ module seg(
     reg sclk = 0;
     always@(posedge clk)
     begin
-        if(clk_cnt == 255)
+        if(clk_cnt ==350)
         begin
             sclk <= ~sclk;
             clk_cnt <= 0;
@@ -26,8 +26,8 @@ module seg(
             clk_cnt <= clk_cnt + 1;
     end
     wire [6:0] out0;
-   wire  [6:0] out1;
-   wire [6:0] out2;
+    wire [6:0] out1;
+    wire [6:0] out2;
     wire [6:0] out3;
     seg_decoder seg0(
         .clk(clk),
@@ -98,7 +98,7 @@ module seg(
             begin
                 num0 <= 0;
             end
-            else if(num0 != 5)
+            else if(num0 != 5&&num3!=5)
             num0=num0+1;
             end
           always@(posedge lose2 or posedge rst)
@@ -107,14 +107,7 @@ module seg(
                        begin
                            num3 <= 0;
                        end
-                       else if(num3 != 5)
+                       else if(num0!=5&&num3 != 5)
                        num3=num3+1;
-                       end
-           
-                
-
-
-
-    
-
+                       end 
 endmodule
