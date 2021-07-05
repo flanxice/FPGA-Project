@@ -68,7 +68,7 @@ always @(*) begin
     case (vgaMUX)
         0 : begin
             {RGB, vga_h, vga_v} = {RGB0, vga_h0, vga_v0};
-            {seg_select, seg_LED} = 11'b00000000000;
+            {seg_select, seg_LED} = 11'b00000001111;
         end
         1 : begin
             {RGB, vga_h, vga_v} = {RGB2, vga_h2, vga_v2};

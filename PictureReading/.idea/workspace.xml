@@ -2,44 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd7ed873-1f78-4b65-90f3-b2be773b0772" name="默认变更列表" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/FPGA-Project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/FPGA-Project/v16/.suo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/ProjectSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/VSWorkspaceState.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/slnx.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/Button.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/ClockDiv.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/DataPath.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/Definition.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/FSM.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/TopModule.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/background/VGA_back_display.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/background/VGA_back_whole.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/background/VGA_driver.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/ball/SBgame.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/ball/VGA_Dispay.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/ball/seg.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/ball/seg_decoder.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/snake/Game_Ctrl_Unit.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/snake/Key.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/snake/Seg_Display.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/snake/Snake.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/snake/Snake_Eatting_Apple.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/snake/VGA_Control.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/snake/VGA_top.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGASourse/snake/top_greedy_snake.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FPGA_project_reference/Tetris_Basys3/source/tetris_vga2.v" beforeDir="false" afterPath="$PROJECT_DIR$/../FPGA_project_reference/Tetris_Basys3/source/tetris_vga2.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PIL.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/PIL.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/makeTXT.py" beforeDir="false" afterPath="$PROJECT_DIR$/makeTXT.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu4d.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/新建文本文档.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitignore.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +87,7 @@
       <workItem from="1624026390550" duration="2242000" />
       <workItem from="1624036035766" duration="38000" />
       <workItem from="1624039441848" duration="1170000" />
+      <workItem from="1624241334454" duration="594000" />
     </task>
     <servers />
   </component>

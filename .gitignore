@@ -1,0 +1,12 @@
+.vscode
+.DS_Store
+*.s
+*.o
+*.exe
+*.pt
+*.aux
+*.log
+*.bbl
+*.blg
+*.synctex.gz
+.idea
